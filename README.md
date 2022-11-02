@@ -6,6 +6,7 @@
 - 👀 I’m interested in everything from law to physics, autonomous cars/smartmobility to film, tech startups to climate change, writing, and everything in between.
 - 🌱 I’m currently learning github to tie together my solid HTML, working CSS, and minimal JS frontend knowledge... really just for fun.
 - 💞️ I’m looking to collaborate on anything in law; climate/energy; autonomous vehicles; front-end (HTML/CSS) dev.
+- 💡 I just launched a daily newsletter summarizing the top news in climate change, clean energy, and AVs/EVs: https://futureperfect.news
 - 📫 How to reach me: [twitter.com/marchoag](url); [linkedin.com/in/marchoag](url); [marchoag.medium.com](url)
 
 <!---
