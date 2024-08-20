@@ -14,7 +14,7 @@
 
 💞️ I’m looking to collaborate on anything.
 
-📫 How to reach me: [Marc Hoag Law(https://marchoaglaw.com)] | [twitter.com/marchoag](url); [linkedin.com/in/marchoag](url); [marchoag.medium.com](url)
+📫 How to reach me: [Marc Hoag Law](https://marchoaglaw.com) | [twitter.com/marchoag](url); [linkedin.com/in/marchoag](url); [marchoag.medium.com](url)
 
 <!---
 marchoag/marchoag is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
