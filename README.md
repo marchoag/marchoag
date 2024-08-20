@@ -2,7 +2,7 @@
 
 🎙 You probably know me from my podcast (google "autonomous cars podcasts" and I should be your first organic result).
 
-⚖️ I'm a California-licensed tech startup attorney ([marchoaglaw.com](url);) focused on AI and helping EU founders expand to the US.
+⚖️ I'm a California-licensed tech startup attorney ([Marc Hoag Law](https://marchoaglaw.com)) focused on AI and helping EU founders expand to the US.
 
 💻 I founded a venture-backed startup and spun out a few others, and currently sit on the advisory board of an SF-based teleops startup.
 
@@ -14,7 +14,7 @@
 
 💞️ I’m looking to collaborate on anything.
 
-📫 How to reach me: [Marc Hoag Law](https://marchoaglaw.com) | [twitter.com/marchoag](url); [linkedin.com/in/marchoag](url); [marchoag.medium.com](url)
+📫 How to reach me: [Marc Hoag Law](https://marchoaglaw.com) | [@MarcHoag](https://twitter.com/marchoag) | [LinkedIn](https://linkedin.com/in/marchoag) | [Medium](https://marchoag.medium.com)
 
 <!---
 marchoag/marchoag is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
