@@ -1,8 +1,6 @@
-👋 Hi, I’m @MarcHoag (otherwise known as @AutonomousHoag)
+👋 Hi, I’m @MarcHoag; you can learn more about me at ([Marc Hoag Law](https://marchoaglaw.com))
 
-🎙 You probably know me from my podcast (google "autonomous cars podcasts" and I should be your first organic result).
-
-⚖️ I'm a California-licensed tech startup attorney ([Marc Hoag Law](https://marchoaglaw.com)) focused on AI and helping EU founders expand to the US.
+⚖️ I'm a California-licensed SaaS attorney with ([Pasha Law PC](https://pashalaw.com)) focused on tech startups and AI.
 
 💻 I founded a venture-backed startup and spun out a few others, and currently sit on the advisory board of an SF-based teleops startup.
 
@@ -10,9 +8,6 @@
 
 👀 I’m interested in everything from law to physics, autonomous cars/smartmobility to film, tech startups to climate change, writing, and everything in between.
 
-🌱 I’m currently learning github to tie together my solid HTML, working CSS, and minimal JS frontend knowledge... really just for fun.
-
-💞️ I’m looking to collaborate on anything.
 
 📫 How to reach me: [Marc Hoag Law](https://marchoaglaw.com) | [@MarcHoag](https://twitter.com/marchoag) | [LinkedIn](https://linkedin.com/in/marchoag) | [Medium](https://marchoag.medium.com)
 
