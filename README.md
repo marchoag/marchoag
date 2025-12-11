@@ -2,6 +2,8 @@
 
 ⚖️ I'm a California-licensed SaaS attorney focused on tech startups and AI.
 
+🪑 I also chair the AI and the Law section of the Beverly Hills Bar Association. 
+
 💻 I founded a venture-backed startup and spun out a few others, and currently sit on the advisory board of an SF-based teleops startup.
 
 🧸 I'm a UCLA Econ grad with a solid background in advanced math, physics, and chemistry, and was even pre-med for a while.
