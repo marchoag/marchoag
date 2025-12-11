@@ -1,6 +1,6 @@
-👋 Hi, I’m @MarcHoag; you can learn more about me at ([Marc Hoag Law](https://marchoaglaw.com))
+👋 Hi, I’m @MarcHoag; you can learn more about me at ([Hoag Law.ai](https://hoaglaw.ai))
 
-⚖️ I'm a California-licensed SaaS attorney with ([Pasha Law PC](https://pashalaw.com)) focused on tech startups and AI.
+⚖️ I'm a California-licensed SaaS attorney focused on tech startups and AI.
 
 💻 I founded a venture-backed startup and spun out a few others, and currently sit on the advisory board of an SF-based teleops startup.
 
@@ -9,7 +9,7 @@
 👀 I’m interested in everything from law to physics, autonomous cars/smartmobility to film, tech startups to climate change, writing, and everything in between.
 
 
-📫 How to reach me: [Marc Hoag Law](https://marchoaglaw.com) | [@MarcHoag](https://twitter.com/marchoag) | [LinkedIn](https://linkedin.com/in/marchoag) | [Medium](https://marchoag.medium.com)
+📫 How to reach me: [Hoag Law.ai](https://hoaglaw.ai) | [@MarcHoag](https://twitter.com/marchoag) | [LinkedIn](https://linkedin.com/in/marchoag) | [Medium](https://marchoag.medium.com)
 
 <!---
 marchoag/marchoag is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
