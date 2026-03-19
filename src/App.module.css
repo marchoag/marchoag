@@ -141,7 +141,7 @@
 .mqTrack {
   display: flex;
   white-space: nowrap;
-  animation: mq 14s linear infinite;
+  animation: mq 12s linear infinite;
 }
 
 @keyframes mq {
@@ -483,6 +483,7 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
+  .mqTrack { animation-duration: 6s; }
   .heroInner { flex-direction: column-reverse; gap: 2rem; }
   .heroPhoto { align-self: center; }
   .heroImg { width: 180px; height: 180px; }

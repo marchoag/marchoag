@@ -142,14 +142,12 @@ export default function App() {
       <section className={s.bioSection}>
         <h2 className={s.sectionLabel}>Background</h2>
         <p className={s.bioText}>
-          A UCLA Bruin who started as an astrophysics major under Dr. Andrea
-          Ghez before exploring nearly every science discipline and finishing
-          with economics, Marc was licensed by the California Bar in 2008 and
-          founded Venturocket — a VC-backed, Series A-funded jobs marketplace
-          that reimagined hiring with an AdWords-inspired pay-per-connection
-          model. He spun out Twibble, a social media marketing tool for Twitter,
-          and later built an autonomous vehicle-focused consultancy. He also
-          hosted{' '}
+          Marc studied astrophysics at UCLA under Dr. Andrea Ghez, tearing
+          through engineering-track math, physics, chemistry, and pre-med
+          before finishing with economics. He passed the California Bar in
+          2008, then founded Venturocket — a VC-backed, Series A-funded jobs
+          marketplace. He spun out Twibble, a social media marketing tool,
+          and built an autonomous vehicle consultancy. He also hosted{' '}
           <a href={PODCAST_URL} target="_blank" rel="noopener noreferrer" className={s.bioLink}>
             Autonomous Vehicles with Marc Hoag
           </a>{' '}
