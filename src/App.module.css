@@ -141,7 +141,7 @@
 .mqTrack {
   display: flex;
   white-space: nowrap;
-  animation: mq 24s linear infinite;
+  animation: mq 14s linear infinite;
 }
 
 @keyframes mq {

@@ -364,6 +364,52 @@
       .footer-small a { color: var(--faint); text-decoration: none; transition: color .15s; }
       .footer-small a:hover { color: var(--ink); opacity: 1; }
 
+      /* ── SUB-PROCESSORS TABLE ── */
+      .sp-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1.25rem 0;
+        border: 1.5px solid var(--fainter);
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      .sp-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 560px;
+      }
+
+      .sp-table thead th {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: var(--faint);
+        font-weight: 500;
+        text-align: left;
+        padding: 14px 18px;
+        border-bottom: 1.5px solid var(--fainter);
+        white-space: nowrap;
+      }
+
+      .sp-table tbody td {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--mid);
+        padding: 12px 18px;
+        border-bottom: 1px solid var(--fainter);
+        line-height: 1.6;
+      }
+
+      .sp-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .sp-table tbody tr:nth-child(even) {
+        background: #faf9f6;
+      }
+
       /* ── RESPONSIVE ── */
       @media (max-width: 640px) {
         .hero { padding-top: 3rem; }
@@ -372,6 +418,7 @@
         .callout { padding: 1.25rem 1.25rem; }
         .contact-block { padding: 1.5rem 1.25rem; }
         .footer-inner { flex-direction: column; }
+        .sp-table-wrap { margin-left: -0.5rem; margin-right: -0.5rem; }
       }
     </style>
   </head>
@@ -466,9 +513,95 @@
         </ul>
       </section>
 
-      <!-- 04. Your Rights -->
+      <!-- 04. Sub-Processors -->
       <section class="section">
-        <div class="section-label">04 &mdash; Your rights</div>
+        <div class="section-label">04 &mdash; Sub-Processors</div>
+        <h2>Sub-processors</h2>
+        <p>
+          The following third-party services may process data in connection with your visit to marchoag.com. Because this is a static site with no user accounts, no forms, and no cookies, the data involved is minimal and largely limited to standard server-level information.
+        </p>
+        <div class="sp-table-wrap">
+          <table class="sp-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Processed</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Render</td>
+                <td>Static site hosting</td>
+                <td>Server logs (IP, user agent, timestamps)</td>
+                <td>United States</td>
+              </tr>
+              <tr>
+                <td>Google Fonts</td>
+                <td>Typography delivery</td>
+                <td>IP address, browser info</td>
+                <td>Global (Google)</td>
+              </tr>
+              <tr>
+                <td>Plausible Analytics</td>
+                <td>Privacy-friendly analytics</td>
+                <td>Page views, referrer, browser, OS, device type, country (all anonymous)</td>
+                <td>European Union</td>
+              </tr>
+              <tr>
+                <td>Cloudflare</td>
+                <td>DNS</td>
+                <td>DNS query data</td>
+                <td>Global</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 05. GDPR / International -->
+      <section class="section">
+        <div class="section-label">05 &mdash; GDPR / International</div>
+        <h2>GDPR &amp; international privacy</h2>
+        <p>
+          Although marchoag.com is operated from the United States, we respect the privacy rights of visitors worldwide, including those protected under the General Data Protection Regulation (GDPR).
+        </p>
+        <div class="callout callout-cobalt">
+          <h3>Legal basis for processing</h3>
+          <p>
+            Our legal basis for processing the limited data described in this policy is <strong>legitimate interests</strong> (Article 6(1)(f) GDPR) — specifically, the legitimate interest of operating and maintaining the site and understanding aggregate usage through privacy-friendly analytics. Because we do not collect personal data beyond anonymous server logs and cookieless analytics, this processing is minimal and proportionate.
+          </p>
+        </div>
+        <div class="callout callout-cyan">
+          <h3>Your GDPR rights</h3>
+          <p>If you are located in the European Economic Area, you have the following rights under the GDPR:</p>
+          <ul>
+            <li><strong>Right of access</strong> — to request a copy of any personal data we hold about you</li>
+            <li><strong>Right to rectification</strong> — to request correction of inaccurate data</li>
+            <li><strong>Right to erasure</strong> — to request deletion of your personal data</li>
+            <li><strong>Right to restriction</strong> — to request we limit how we process your data</li>
+            <li><strong>Right to data portability</strong> — to receive your data in a structured, machine-readable format</li>
+            <li><strong>Right to object</strong> — to object to the processing of your personal data</li>
+          </ul>
+          <p>
+            Because this site does not require accounts and does not use cookies or tracking, most data associated with your visit consists of anonymous server logs that cannot be linked back to you individually.
+          </p>
+        </div>
+        <div class="callout callout-accent">
+          <h3>Data controller &amp; GDPR contact</h3>
+          <p>
+            <strong>Data controller:</strong> Marc Hoag, Marin County, California, United States.
+          </p>
+          <p>
+            To exercise any of your GDPR rights, please email <a href="mailto:marc@marchoag.com?subject=GDPR%20Request">marc@marchoag.com</a> with the subject line <strong>"GDPR Request"</strong>. We will respond within 30 days of receiving your request.
+          </p>
+        </div>
+      </section>
+
+      <!-- 06. Your Rights -->
+      <section class="section">
+        <div class="section-label">06 &mdash; Your rights</div>
         <h2>Your privacy rights</h2>
         <p>
           Because we do not collect or store personal information, there is realistically no data for us to provide, correct, or delete. That said, you retain all rights granted to you under applicable privacy laws, including the California Consumer Privacy Act (CCPA) and the General Data Protection Regulation (GDPR).
@@ -484,18 +617,18 @@
         </p>
       </section>
 
-      <!-- 05. Children -->
+      <!-- 07. Children -->
       <section class="section">
-        <div class="section-label">05 &mdash; Children</div>
+        <div class="section-label">07 &mdash; Children</div>
         <h2>Children's privacy</h2>
         <p>
           This site is not directed at children under the age of 13 and does not knowingly collect information from children. Since the site collects no personal information from any visitor, there is no data at risk.
         </p>
       </section>
 
-      <!-- 06. Changes -->
+      <!-- 08. Changes -->
       <section class="section">
-        <div class="section-label">06 &mdash; Changes</div>
+        <div class="section-label">08 &mdash; Changes</div>
         <h2>Changes to this policy</h2>
         <p>
           If this privacy policy is updated, the revised version will be posted at this URL with an updated effective date. For material changes, a notice will be posted on the main page of marchoag.com at least 30 days before the changes take effect.
@@ -505,9 +638,9 @@
         </p>
       </section>
 
-      <!-- 07. Contact -->
+      <!-- 09. Contact -->
       <section class="section">
-        <div class="section-label">07 &mdash; Contact</div>
+        <div class="section-label">09 &mdash; Contact</div>
         <h2>Get in touch</h2>
         <p>
           If you have any questions about this privacy policy, please reach out.
