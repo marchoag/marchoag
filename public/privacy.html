@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — marchoag.com</title>
+    <meta name="description" content="Privacy policy for marchoag.com — a personal landing page and project directory by Marc Hoag." />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="canonical" href="https://marchoag.com/privacy" />
+
+    <!-- Fonts (same as main site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --lime:    #8FCC00;
+        --coral:   #FF3A00;
+        --cobalt:  #1A3BFF;
+        --yellow:  #D4A800;
+        --cyan:    #00AACC;
+        --magenta: #CC0066;
+        --page:    #F7F4EE;
+        --ink:     #111111;
+        --mid:     #555555;
+        --faint:   #AAAAAA;
+        --fainter: #DDDDDD;
+        --font-display: 'Bricolage Grotesque', sans-serif;
+        --font-serif:   'Instrument Serif', serif;
+        --font-mono:    'DM Mono', monospace;
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        background: var(--page);
+        color: var(--ink);
+        font-family: var(--font-display);
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.7;
+      }
+
+      ::selection { background: var(--lime); color: var(--ink); }
+
+      a { color: var(--coral); text-decoration: none; transition: opacity .15s; }
+      a:hover { opacity: .75; }
+
+      /* ── TOP NAV ── */
+      .nav {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 2rem 2rem 0;
+      }
+
+      .back-link {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: .06em;
+        color: var(--coral);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1.5px solid var(--coral);
+        padding-bottom: 1px;
+      }
+
+      .back-link:hover { opacity: .7; }
+
+      /* ── HERO HEADER ── */
+      .hero {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 4rem 2rem 0;
+      }
+
+      .hero-kicker {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin-bottom: 1rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 6vw, 56px);
+        font-weight: 800;
+        line-height: .97;
+        letter-spacing: -.03em;
+        color: var(--ink);
+        margin-bottom: 1.25rem;
+      }
+
+      .hero h1 em {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--coral);
+      }
+
+      .hero-sub {
+        font-size: 17px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.7;
+        max-width: 540px;
+      }
+
+      /* ── ACCENT BAR ── */
+      .accent-bar {
+        max-width: 680px;
+        margin: 3rem auto 0;
+        padding: 0 2rem;
+        display: flex;
+        gap: 4px;
+        height: 4px;
+      }
+
+      .accent-bar span {
+        flex: 1;
+        border-radius: 2px;
+      }
+
+      /* ── CONTENT ── */
+      .content {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 3rem 2rem 4rem;
+      }
+
+      /* ── SECTION ── */
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin-bottom: .75rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section-label::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--fainter);
+      }
+
+      .section h2 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -.02em;
+        color: var(--ink);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .section p {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+
+      .section ul li {
+        font-size: 15px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.8;
+        padding-left: 1.25rem;
+        position: relative;
+      }
+
+      .section ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--fainter);
+      }
+
+      /* ── CALLOUT CARD ── */
+      .callout {
+        background: #fff;
+        border: 1.5px solid var(--fainter);
+        border-radius: 12px;
+        padding: 1.5rem 1.75rem;
+        margin: 1.25rem 0;
+      }
+
+      .callout-accent {
+        border-left: 4px solid var(--coral);
+      }
+
+      .callout-lime {
+        border-left: 4px solid var(--lime);
+      }
+
+      .callout-cobalt {
+        border-left: 4px solid var(--cobalt);
+      }
+
+      .callout-cyan {
+        border-left: 4px solid var(--cyan);
+      }
+
+      .callout h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: .5rem;
+        letter-spacing: -.01em;
+      }
+
+      .callout p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.75;
+        margin-bottom: .5rem;
+      }
+
+      .callout p:last-child {
+        margin-bottom: 0;
+      }
+
+      .callout ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .callout ul li {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.75;
+        padding-left: 1.25rem;
+        position: relative;
+      }
+
+      .callout ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--fainter);
+      }
+
+      /* ── PILL ── */
+      .pill {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: .06em;
+        padding: 4px 11px;
+        border-radius: 100px;
+        border: 1.5px solid var(--fainter);
+        color: var(--mid);
+        background: #fff;
+      }
+
+      /* ── CONTACT BLOCK ── */
+      .contact-block {
+        background: #fff;
+        border: 2px solid var(--ink);
+        border-radius: 12px;
+        padding: 2rem 2rem;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .contact-block h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: .5rem;
+        letter-spacing: -.01em;
+      }
+
+      .contact-block p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--mid);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .contact-email {
+        font-family: var(--font-mono);
+        font-size: 15px;
+        color: var(--coral);
+        border-bottom: 1.5px solid var(--coral);
+        padding-bottom: 1px;
+      }
+
+      /* ── FOOTER ── */
+      .page-footer {
+        border-top: 2px solid var(--ink);
+        background: #fff;
+        padding: 5rem 2.5rem 3rem;
+        margin-top: 4rem;
+      }
+      .footer-wrap { max-width: 820px; margin: 0 auto; }
+      .footer-inner {
+        display: flex; gap: 3rem; justify-content: space-between;
+        flex-wrap: wrap; margin-bottom: 3rem; align-items: flex-start;
+      }
+      .footer-big {
+        font-family: var(--font-display); font-size: clamp(52px, 7vw, 84px);
+        font-weight: 800; line-height: .97; letter-spacing: -.03em; color: var(--ink);
+      }
+      .footer-big em {
+        font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--coral);
+      }
+      .social-row { display: flex; gap: .6rem; margin-top: 1.25rem; }
+      .social-link {
+        display: inline-flex; align-items: center; justify-content: center;
+        color: var(--mid); border: 1.5px solid var(--fainter); width: 38px; height: 38px;
+        border-radius: 50%; background: var(--page); transition: color .15s, border-color .15s;
+        text-decoration: none;
+      }
+      .social-link:hover { color: var(--ink); border-color: var(--ink); opacity: 1; }
+      .social-link svg { width: 15px; height: 15px; }
+      .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+      .footer-group { display: flex; flex-direction: column; gap: .4rem; }
+      .footer-group-label {
+        font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+        text-transform: uppercase; color: var(--faint); margin-bottom: .2rem;
+      }
+      .footer-group a, .footer-group span {
+        font-size: 13px; color: var(--mid); transition: color .15s; text-decoration: none;
+      }
+      .footer-group a:hover { color: var(--ink); opacity: 1; }
+      .footer-small {
+        font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; color: var(--fainter);
+      }
+      .footer-small a { color: var(--faint); text-decoration: none; transition: color .15s; }
+      .footer-small a:hover { color: var(--ink); opacity: 1; }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 640px) {
+        .hero { padding-top: 3rem; }
+        .hero h1 { font-size: 32px; }
+        .section h2 { font-size: 22px; }
+        .callout { padding: 1.25rem 1.25rem; }
+        .contact-block { padding: 1.5rem 1.25rem; }
+        .footer-inner { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Nav -->
+    <nav class="nav">
+      <a href="https://marchoag.com" class="back-link">&larr; Back to marchoag.com</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-kicker">Legal / Privacy</div>
+      <h1>Privacy <em>Policy</em></h1>
+      <p class="hero-sub">
+        This policy explains how marchoag.com handles your information. The short version: we collect almost nothing, because there is almost nothing to collect.
+      </p>
+    </header>
+
+    <!-- Accent bar -->
+    <div class="accent-bar">
+      <span style="background: var(--coral);"></span>
+      <span style="background: var(--lime);"></span>
+      <span style="background: var(--cobalt);"></span>
+      <span style="background: var(--yellow);"></span>
+      <span style="background: var(--cyan);"></span>
+      <span style="background: var(--magenta);"></span>
+    </div>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- 01. Overview -->
+      <section class="section">
+        <div class="section-label">01 &mdash; Overview</div>
+        <h2>What this site is</h2>
+        <p>
+          marchoag.com is a personal landing page and project directory operated by Marc Hoag from Marin County, California, United States. It is a simple, static website with no user accounts, no login system, no cookies, no analytics, and no advertising.
+        </p>
+        <div class="callout callout-lime">
+          <h3>The short version</h3>
+          <p>
+            This site does not collect your personal information. There are no forms, no trackers, no cookies, and no user accounts. You browse, you read, you leave.
+          </p>
+        </div>
+      </section>
+
+      <!-- 02. What We Collect -->
+      <section class="section">
+        <div class="section-label">02 &mdash; Information</div>
+        <h2>What we collect</h2>
+        <p>
+          This site does not actively collect any personal information from visitors. However, like virtually all websites, there are two passive mechanisms to be aware of:
+        </p>
+        <div class="callout callout-accent">
+          <h3>Server logs</h3>
+          <p>
+            Our hosting provider may automatically log standard technical information when you visit, including your IP address, browser type, referring URL, and the pages you request. These logs are maintained by the hosting infrastructure and are not accessed, analyzed, or stored by us for any purpose.
+          </p>
+        </div>
+        <div class="callout callout-cobalt">
+          <h3>Google Fonts</h3>
+          <p>
+            This site loads typefaces from Google Fonts, a third-party service operated by Google LLC. When you visit, your browser connects to Google's servers to fetch font files. Google may log this request in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We have no access to or control over any data Google may collect through this service.
+          </p>
+        </div>
+      </section>
+
+      <!-- 03. What We Don't Collect -->
+      <section class="section">
+        <div class="section-label">03 &mdash; What we don't do</div>
+        <h2>Things this site does not do</h2>
+        <p>To be explicit about what this site does <strong>not</strong> do:</p>
+        <ul>
+          <li>We do not use cookies or local storage</li>
+          <li>We do not run analytics or tracking scripts</li>
+          <li>We do not display advertising</li>
+          <li>We do not sell, rent, or share any data</li>
+          <li>We do not collect email addresses or form submissions</li>
+          <li>We do not create user accounts or profiles</li>
+          <li>We do not use fingerprinting or any identification techniques</li>
+          <li>We do not embed social media trackers or pixels</li>
+        </ul>
+      </section>
+
+      <!-- 04. Your Rights -->
+      <section class="section">
+        <div class="section-label">04 &mdash; Your rights</div>
+        <h2>Your privacy rights</h2>
+        <p>
+          Because we do not collect or store personal information, there is realistically no data for us to provide, correct, or delete. That said, you retain all rights granted to you under applicable privacy laws, including the California Consumer Privacy Act (CCPA) and the General Data Protection Regulation (GDPR).
+        </p>
+        <div class="callout callout-cyan">
+          <h3>California residents</h3>
+          <p>
+            Under the CCPA, you have the right to know what personal information is collected, request its deletion, and opt out of the sale of personal information. We do not sell personal information. We do not collect personal information beyond what is described above.
+          </p>
+        </div>
+        <p>
+          If you have questions about your rights or believe we hold any information about you, please contact us using the information below.
+        </p>
+      </section>
+
+      <!-- 05. Children -->
+      <section class="section">
+        <div class="section-label">05 &mdash; Children</div>
+        <h2>Children's privacy</h2>
+        <p>
+          This site is not directed at children under the age of 13 and does not knowingly collect information from children. Since the site collects no personal information from any visitor, there is no data at risk.
+        </p>
+      </section>
+
+      <!-- 06. Changes -->
+      <section class="section">
+        <div class="section-label">06 &mdash; Changes</div>
+        <h2>Changes to this policy</h2>
+        <p>
+          If this privacy policy is updated, the revised version will be posted at this URL with an updated effective date. For material changes, a notice will be posted on the main page of marchoag.com at least 30 days before the changes take effect.
+        </p>
+        <p>
+          <span class="pill">Effective: March 19, 2026</span>
+        </p>
+      </section>
+
+      <!-- 07. Contact -->
+      <section class="section">
+        <div class="section-label">07 &mdash; Contact</div>
+        <h2>Get in touch</h2>
+        <p>
+          If you have any questions about this privacy policy, please reach out.
+        </p>
+        <div class="contact-block">
+          <h3>Marc Hoag</h3>
+          <p>Marin County, California, United States</p>
+          <a href="mailto:marc@marchoag.com" class="contact-email">marc@marchoag.com</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-wrap">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-big">Let's<br><em>talk.</em></div>
+            <div class="social-row">
+              <a class="social-link" aria-label="LinkedIn" href="https://linkedin.com/in/marchoag" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a class="social-link" aria-label="X" href="https://x.com/marchoag" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+              </a>
+              <a class="social-link" aria-label="GitHub" href="https://github.com/marchoag" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a class="social-link" aria-label="TikTok" href="https://tiktok.com/@marc.hoag.ai.lawyer" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-group">
+              <p class="footer-group-label">Writing</p>
+              <a href="https://hoaglaw.ai/blog" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+              <a href="https://www.futureperfect.news" target="_blank" rel="noopener noreferrer">Newsletter ↗</a>
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5291815" target="_blank" rel="noopener noreferrer">SSRN ↗</a>
+            </div>
+            <div class="footer-group">
+              <p class="footer-group-label">Work with me</p>
+              <a href="https://hoaglaw.ai" target="_blank" rel="noopener noreferrer">Hoag Law.ai ↗</a>
+              <a href="https://skyriven.ai" target="_blank" rel="noopener noreferrer">Skyriven.ai ↗</a>
+              <a href="https://finnly.ai" target="_blank" rel="noopener noreferrer">Finnly.ai ↗</a>
+              <a href="mailto:marc@marchoag.com">marc@marchoag.com</a>
+            </div>
+            <div class="footer-group">
+              <p class="footer-group-label">Find me</p>
+              <span>Marin County, CA</span>
+            </div>
+          </div>
+        </div>
+        <p class="footer-small">© 2026 Marc Hoag · Attorney Advertisement · Prior results do not guarantee a similar outcome.</p>
+        <p class="footer-small" style="margin-top:.5rem"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/stack.html">Colophon</a></p>
+      </div>
+    </footer>
+
+  </body>
+</html>

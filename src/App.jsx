@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ITEMS, MARQUEE_WORDS, MARQUEE_COLORS, BADGE_LABELS } from './data.js'
+import { PROJECTS, PODCAST_URL, MARQUEE_WORDS, MARQUEE_COLORS, BADGE_LABELS } from './data.js'
 import s from './App.module.css'
 
 /* ── Marquee ── */
@@ -24,15 +24,14 @@ function Badge({ status }) {
   return <span className={`${s.badge} ${s['badge_' + status]}`}>{BADGE_LABELS[status]}</span>
 }
 
-/* ── Timeline item ── */
-function TLItem({ item }) {
+/* ── Project card ── */
+function ProjectCard({ item }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    // Show immediately if already in viewport
     const rect = el.getBoundingClientRect()
     if (rect.top < window.innerHeight) { setVisible(true); return }
     const obs = new IntersectionObserver(
@@ -43,54 +42,46 @@ function TLItem({ item }) {
     return () => obs.disconnect()
   }, [])
 
-  const dotStyle = item.color
-    ? { background: item.color, borderColor: item.color, boxShadow: `0 0 0 3px ${item.color}22` }
+  const isRedacted = !item.domain && !item.href
+  const Wrapper = item.href ? 'a' : 'div'
+  const wrapperProps = item.href
+    ? { href: item.href, target: '_blank', rel: 'noopener noreferrer' }
     : {}
 
   return (
-    <div ref={ref} className={`${s.tlItem} ${visible ? s.tlItemIn : ''}`}>
-      <div className={s.tlYear}>{item.year}</div>
-      <div className={s.tlSpine}>
-        <div className={s.tlDot} style={dotStyle} />
-        <div className={s.tlConnector} />
-      </div>
-      <div className={s.tlBody}>
-        <div className={s.tlMeta}>
-          <span className={s.tlTag}>{item.tag}</span>
+    <Wrapper
+      ref={ref}
+      className={`${s.card} ${visible ? s.cardIn : ''} ${isRedacted ? s.cardRedacted : ''}`}
+      style={{ '--accent': item.color }}
+      {...wrapperProps}
+    >
+      {item.ogImage ? (
+        <div className={s.cardThumb}>
+          <img src={item.ogImage} alt={item.title} className={s.cardThumbImg} loading="lazy" style={{ ...(item.ogFit && { objectFit: item.ogFit }), ...(item.ogPos && { objectPosition: item.ogPos }), ...(item.ogScale && { transform: `scale(${item.ogScale})` }) }} />
+        </div>
+      ) : item.domain ? (
+        <div className={s.cardThumb}>
+          <span className={s.cardThumbIcon}>↗</span>
+          <span className={s.cardThumbLabel}>{item.domain}</span>
+        </div>
+      ) : (
+        <div className={s.cardThumbRedacted}>
+          <span className={s.cardThumbIcon}>?</span>
+        </div>
+      )}
+
+      <div className={s.cardBody}>
+        <div className={s.cardMeta}>
+          <span className={s.cardTag}>{item.tag}</span>
           <Badge status={item.status} />
         </div>
-        <h3 className={s.tlTitle} style={item.color ? { color: item.color } : {}}>
-          {item.title}
-        </h3>
-        {item.domain && <p className={s.tlDomain}>{item.domain}</p>}
-        <p className={s.tlDesc}>{item.desc}</p>
-        {item.href && (
-          <a
-            className={s.tlLink}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: item.color }}
-          >
-            Visit {item.domain} ↗
-          </a>
-        )}
+        <h3 className={s.cardTitle}>{item.title}</h3>
+        <p className={s.cardDesc}>{item.desc}</p>
         {item.domain && (
-          <a
-            href={item.href || '#'}
-            target={item.href ? '_blank' : undefined}
-            rel={item.href ? 'noopener noreferrer' : undefined}
-            className={s.tlThumb}
-            style={{ borderColor: item.color ? `${item.color}33` : 'var(--fainter)' }}
-          >
-            <div className={s.tlThumbInner} style={{ background: item.color ? `${item.color}0A` : 'var(--page)' }}>
-              <span className={s.tlThumbIcon} style={{ color: item.color || 'var(--faint)' }}>↗</span>
-              <span className={s.tlThumbLabel}>{item.domain}</span>
-            </div>
-          </a>
+          <span className={s.cardLink}>Visit {item.domain} ↗</span>
         )}
       </div>
-    </div>
+    </Wrapper>
   )
 }
 
@@ -119,7 +110,7 @@ export default function App() {
                 <span key={p} className={s.pill}>{p}</span>
               ))}
             </div>
-            <div className={s.scrollHint}>The story ↓</div>
+            <div className={s.scrollHint}>See what I'm building ↓</div>
           </div>
           <div className={s.heroPhoto}>
             <img src="/marchoag-glow.png" alt="Marc Hoag" className={s.heroImg} />
@@ -130,13 +121,42 @@ export default function App() {
       {/* Marquee */}
       <Marquee />
 
-      {/* Timeline */}
-      <main className={s.tlSection}>
-        <p className={s.sectionLabel}>The story so far</p>
-        <div className={s.tl}>
-          {ITEMS.map((item, i) => <TLItem key={i} item={item} />)}
+      {/* Projects Grid */}
+      <main className={s.gridSection}>
+        <h2 className={s.sectionLabel}>Live now</h2>
+        <div className={s.grid}>
+          {PROJECTS.filter(p => p.status === 'live' || p.status === 'launched').map((item, i) => (
+            <ProjectCard key={i} item={item} />
+          ))}
+        </div>
+
+        <h2 className={`${s.sectionLabel} ${s.sectionLabelSub}`}>Coming soon</h2>
+        <div className={s.grid}>
+          {PROJECTS.filter(p => p.status === 'soon' || p.status === null).map((item, i) => (
+            <ProjectCard key={i} item={item} />
+          ))}
         </div>
       </main>
+
+      {/* Background */}
+      <section className={s.bioSection}>
+        <h2 className={s.sectionLabel}>Background</h2>
+        <p className={s.bioText}>
+          Licensed by the California Bar in 2008, Marc founded Venturocket — a
+          VC-backed, Series A-funded jobs marketplace that reimagined hiring with
+          an AdWords-inspired pay-per-connection model. He spun out Twibble, a
+          social media marketing tool for Twitter, and later built an autonomous
+          vehicle-focused consultancy. He also hosted{' '}
+          <a href={PODCAST_URL} target="_blank" rel="noopener noreferrer" className={s.bioLink}>
+            Autonomous Vehicles with Marc Hoag
+          </a>{' '}
+          (2016–2023), a 200-episode podcast covering the self-driving industry.
+          The founder instinct never left — it just found new outlets.{' '}
+          <a href="https://linkedin.com/in/marchoag" target="_blank" rel="noopener noreferrer" className={s.bioLink}>
+            Learn more on LinkedIn ↗
+          </a>
+        </p>
+      </section>
 
       {/* Footer */}
       <footer className={s.footer}>
@@ -149,6 +169,9 @@ export default function App() {
               </a>
               <a className={s.socialLink} aria-label="X" href="https://x.com/marchoag" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" /></svg>
+              </a>
+              <a className={s.socialLink} aria-label="GitHub" href="https://github.com/marchoag" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
               </a>
               <a className={s.socialLink} aria-label="TikTok" href="https://tiktok.com/@marc.hoag.ai.lawyer" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z" /></svg>
@@ -165,18 +188,21 @@ export default function App() {
             <div className={s.footerGroup}>
               <p className={s.footerGroupLabel}>Work with me</p>
               <a href="https://hoaglaw.ai" target="_blank" rel="noopener noreferrer">Hoag Law.ai ↗</a>
-              <a href="https://hoaglaw.ai/contact" target="_blank" rel="noopener noreferrer">Book a call ↗</a>
-              <a href="mailto:marc@hoaglaw.ai">marc@hoaglaw.ai</a>
+              <a href="https://skyriven.ai" target="_blank" rel="noopener noreferrer">Skyriven.ai ↗</a>
+              <a href="https://finnly.ai" target="_blank" rel="noopener noreferrer">Finnly.ai ↗</a>
+              <a href="mailto:marc@marchoag.com">marc@marchoag.com</a>
             </div>
             <div className={s.footerGroup}>
               <p className={s.footerGroupLabel}>Find me</p>
-              <span>Mill Valley, CA</span>
-              <a href="tel:+14152750505">415.275.0505</a>
+              <span>Marin County, CA</span>
             </div>
           </div>
         </div>
         <p className={s.footerSmall}>
           © {new Date().getFullYear()} Marc Hoag · Attorney Advertisement · Prior results do not guarantee a similar outcome.
+        </p>
+        <p className={s.footerSmall} style={{ marginTop: '.5rem' }}>
+          <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/stack.html">Colophon</a>
         </p>
       </footer>
     </>

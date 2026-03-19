@@ -1,0 +1,39 @@
+# Marc Hoag
+
+> Founder, vibe coder, and California-licensed attorney since 2008.
+
+Marc Hoag is a builder, lawyer, and maker based in Marin County, California. He builds companies, ships products, and helps AI startups move fast without breaking things legally.
+
+## Current Projects
+
+- Hoag Law.ai (https://hoaglaw.ai) - Fractional General Counsel for AI and SaaS startups at a flat monthly rate
+- Skyriven.ai (https://skyriven.ai) - AI advisory, rapid prototyping, and vibe-coded product development
+- Finnly.ai (https://finnly.ai) - Community platform for fractional finance professionals
+- Saccade (https://saccadeapp.com) - iOS eye-tracking A/B testing app
+- Orbital (https://getorbital.dev) - SaaS subscription management dashboard for developers
+- FloodRoute (https://floodroute.com) - Real-time flood and high-tide alerts iOS app
+- Scribefully (https://scribefully.com) - Content discovery and thought leadership platform
+- BHBA AI and the Law (https://bhba.org/sections/ai-and-the-law/) - Inaugural Chair, Beverly Hills Bar Association
+
+## Background
+
+- California Bar licensed since 2008
+- Founded Venturocket, a VC-backed Series A-funded jobs marketplace
+- Spun out Twibble, a social media marketing tool for Twitter
+- Built an autonomous vehicle-focused consultancy
+- Hosted Autonomous Vehicles with Marc Hoag (2016-2023), a 200-episode podcast
+
+## Contact
+
+- Email: marc@marchoag.com
+- LinkedIn: https://linkedin.com/in/marchoag
+- X/Twitter: https://x.com/marchoag
+- GitHub: https://github.com/marchoag
+- Location: Marin County, California
+
+## Links
+
+- Homepage: https://marchoag.com
+- Full context: https://marchoag.com/llms-full.txt
+- Privacy Policy: https://marchoag.com/privacy.html
+- Terms of Service: https://marchoag.com/terms.html
