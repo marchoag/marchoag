@@ -90,7 +90,7 @@ export const PROJECTS = [
     domain: 'scribefully.com',
     href: 'https://scribefully.com',
     color: '#1A5CFF',
-    ogImage: 'https://scribefully.com/scribefully_icon_v3.png',
+    ogImage: '/scribefully-ogimage.png',
     ogFit: 'cover',
     desc: 'A platform for finding and following the people worth reading.',
   },
