@@ -78,7 +78,7 @@ function ProjectCard({ item }) {
         <h3 className={s.cardTitle}>{item.title}</h3>
         <p className={s.cardDesc}>{item.desc}</p>
         {item.domain && (
-          <span className={s.cardLink}>Visit {item.domain} ↗</span>
+          <span className={s.cardLink}>Visit {item.domain} <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></span>
         )}
       </div>
     </Wrapper>
@@ -142,18 +142,21 @@ export default function App() {
       <section className={s.bioSection}>
         <h2 className={s.sectionLabel}>Background</h2>
         <p className={s.bioText}>
-          Licensed by the California Bar in 2008, Marc founded Venturocket — a
-          VC-backed, Series A-funded jobs marketplace that reimagined hiring with
-          an AdWords-inspired pay-per-connection model. He spun out Twibble, a
-          social media marketing tool for Twitter, and later built an autonomous
-          vehicle-focused consultancy. He also hosted{' '}
+          A UCLA Bruin who started as an astrophysics major under Dr. Andrea
+          Ghez before exploring nearly every science discipline and finishing
+          with economics, Marc was licensed by the California Bar in 2008 and
+          founded Venturocket — a VC-backed, Series A-funded jobs marketplace
+          that reimagined hiring with an AdWords-inspired pay-per-connection
+          model. He spun out Twibble, a social media marketing tool for Twitter,
+          and later built an autonomous vehicle-focused consultancy. He also
+          hosted{' '}
           <a href={PODCAST_URL} target="_blank" rel="noopener noreferrer" className={s.bioLink}>
             Autonomous Vehicles with Marc Hoag
           </a>{' '}
           (2016–2023), a 200-episode podcast covering the self-driving industry.
           The founder instinct never left — it just found new outlets.{' '}
           <a href="https://linkedin.com/in/marchoag" target="_blank" rel="noopener noreferrer" className={s.bioLink}>
-            Learn more on LinkedIn ↗
+            Learn more on LinkedIn <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span>
           </a>
         </p>
       </section>
@@ -181,15 +184,15 @@ export default function App() {
           <div className={s.footerLinks}>
             <div className={s.footerGroup}>
               <p className={s.footerGroupLabel}>Writing</p>
-              <a href="https://hoaglaw.ai/blog" target="_blank" rel="noopener noreferrer">Blog ↗</a>
-              <a href="https://www.futureperfect.news" target="_blank" rel="noopener noreferrer">Newsletter ↗</a>
-              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5291815" target="_blank" rel="noopener noreferrer">SSRN ↗</a>
+              <a href="https://hoaglaw.ai/blog" target="_blank" rel="noopener noreferrer">Blog <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
+              <a href="https://www.futureperfect.news" target="_blank" rel="noopener noreferrer">Newsletter <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5291815" target="_blank" rel="noopener noreferrer">SSRN <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
             </div>
             <div className={s.footerGroup}>
               <p className={s.footerGroupLabel}>Work with me</p>
-              <a href="https://hoaglaw.ai" target="_blank" rel="noopener noreferrer">Hoag Law.ai ↗</a>
-              <a href="https://skyriven.ai" target="_blank" rel="noopener noreferrer">Skyriven.ai ↗</a>
-              <a href="https://finnly.ai" target="_blank" rel="noopener noreferrer">Finnly.ai ↗</a>
+              <a href="https://hoaglaw.ai" target="_blank" rel="noopener noreferrer">Hoag Law.ai <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
+              <a href="https://skyriven.ai" target="_blank" rel="noopener noreferrer">Skyriven.ai <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
+              <a href="https://finnly.ai" target="_blank" rel="noopener noreferrer">Finnly.ai <span style={{fontFamily:'var(--font-mono)',fontSize:'inherit'}}>&#x2197;&#xFE0E;</span></a>
               <a href="mailto:marc@marchoag.com">marc@marchoag.com</a>
             </div>
             <div className={s.footerGroup}>
