@@ -78,6 +78,7 @@ export const PROJECTS = [
     href: 'https://floodroute.com',
     color: '#2E9E8F',
     ogImage: 'https://floodroute.com/assets/images/card.jpg',
+    ogFit: 'cover',
     desc: 'Real-time flood and high-tide alerts with crowdsourced reporting. Built in Swift. Covers 16 US regions.',
   },
   {
@@ -89,6 +90,7 @@ export const PROJECTS = [
     href: 'https://scribefully.com',
     color: '#1A5CFF',
     ogImage: 'https://scribefully.com/scribefully_icon_v3.png',
+    ogFit: 'cover',
     desc: 'A platform for finding and following the people worth reading.',
   },
   // ── Coming Soon ──
