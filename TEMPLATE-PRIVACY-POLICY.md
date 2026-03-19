@@ -353,6 +353,30 @@ We do not use your Personal Information or submitted content for training artifi
 **16.3 Future AI Features**
 If we implement AI-powered features, we will update this Privacy Policy and our Terms of Service with clear disclosure and provide opt-out mechanisms where feasible.
 
+**16.4 Third-Party AI Data Sharing (Mobile Apps)** `[iOS ONLY]`
+
+> Required by Apple App Store Guideline 5.1.2(i), added November 13, 2025. Include this section ONLY if the app sends personal data to a third-party AI service. Omit entirely for on-device-only AI or web-only projects. Also add the AI provider to the Sub-Processors table in Section 8.
+
+When you use [feature name], the following Personal Information is transmitted to [AI Provider Name] for processing:
+
+- [List specific data, e.g., "text input," "selected images"]
+
+**Purpose:** [Describe what the AI does with the data, e.g., "generate recipe suggestions," "analyze image preferences"]
+
+**Data handling by [AI Provider Name]:**
+- Data is processed in [location/region]
+- Data is not retained beyond the request duration *(adjust if retention differs)*
+- [AI Provider Name]'s privacy policy: [link]
+
+**Your consent:**
+- You will be prompted for explicit consent before any data is sent to [AI Provider Name] for the first time
+- You may revoke consent at any time in the app's settings, which will disable [feature name]
+- Revoking consent does not affect any data previously processed
+
+**On-device AI:** Features powered by on-device frameworks (e.g., Core ML, ARKit, Vision) process data entirely on your device. No Personal Information leaves your device for these features.
+
+> Remember to add [AI Provider Name] to the Sub-Processors table in Section 8 with: the service name, purpose (e.g., "AI-powered [feature]"), data processed (e.g., "[data types]"), and location.
+
 ---
 
 ### 17. Do Not Track Signals

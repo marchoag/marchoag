@@ -159,6 +159,20 @@ If we implement AI-powered features in the future, we will:
 - Provide an option to opt out where feasible
 - Maintain human oversight over any AI-generated recommendations
 
+**9.4 Third-Party AI Data Sharing (Mobile Apps)** `[iOS ONLY]`
+
+> Required by Apple App Store Guideline 5.1.2(i), added November 13, 2025. Include this section ONLY if the app sends personal data to a third-party AI service (OpenAI, Anthropic, Google, etc.). Omit entirely for on-device-only AI (Core ML, ARKit, etc.) or web-only projects.
+
+The App uses [AI Provider Name] to power [describe feature]. When you use [feature name], the following data is sent to [AI Provider Name] for processing:
+
+- [List specific data sent, e.g., "your text input," "selected images," "voice recording"]
+
+This data is transmitted solely for the purpose of [describe purpose]. [AI Provider Name] processes this data according to their [privacy policy](link) and does not retain it beyond the duration of the request *(adjust if retention differs)*.
+
+**You will be asked for explicit consent before any data is sent to [AI Provider Name] for the first time.** You may revoke this consent at any time in the app's settings, which will disable [feature name].
+
+No personal data is sent to third-party AI services for any on-device features, including [list on-device features if applicable].
+
 ---
 
 ### 10. Privacy and Data Protection
