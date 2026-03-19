@@ -56,6 +56,7 @@ export const PROJECTS = [
     href: 'https://getorbital.dev',
     color: '#00AACC',
     ogImage: 'https://getorbital.dev/homepage_dashboard_screenshot.png',
+    ogFit: 'cover',
     desc: 'Subscription management and app launcher dashboard for developers. Because SaaS sprawl is a real problem.',
   },
   {
